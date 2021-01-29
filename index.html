@@ -1,82 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href=favicon.png type=image/png>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto+Mono&display=swap">
+        <link rel="stylesheet" href="style.min.css">
         <title>SaliesBox</title>
-        <link href=favicon.png rel="shortcut icon" type=image/png>
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-        <style>
-            :root{
-                --main-color:#af1d4c;
-            }
-    
-            body{
-                background-color: #000;
-                font-family: 'EB Garamond', serif;
-                color:var(--main-color);
-                font-size:16px;
-            }
-    
-            #wrapper{
-                position: fixed;
-                top:50%;
-                left:50%;
-                transform:translate(-50%, -50%);
-                width:100%;
-                max-width:240px;
-            }
-    
-            .title{
-                font-family: 'Roboto Mono', monospace;
-                width: 100%;
-                display: block;
-                letter-spacing: 4px;
-            }
-    
-            svg{
-                fill:var(--main-color);
-            }
-    
-            .title > svg{
-                width: 100%;
-            }
-    
-            .avatar{
-                width:100%;
-                border-radius:14px;
-            }
-    
-            .socials{
-                font-size: 1em;
-            }
-    
-            .socials > p{
-                text-align: justify;
-            }
-    
-            .socials a{
-                color:var(--main-color);
-                text-decoration: none;
-                cursor: pointer;
-            }
-    
-            .socials a:hover{
-                text-decoration: underline;
-            }
-    
-            .socials svg{
-                margin-top: 5px;
-                margin-right:4px;
-                width: calc(1em - 4px);
-                height: calc(1em - 4px);
-                display: block;
-                float: left;
-            }
-
-            @media screen and (max-width:625px) {
-                
-            }
-        </style>
+        <meta content=SaliesBox property=og:title/>
+        <meta content=https://saliesbox.com/ property=og:url/>
+        <meta content="It's safer here." property=og:description/>
+        <meta property="og:image" content="https://saliesbox.com/image.png"/>
         <!-- TODO: ADD META -->
     </head>
     <body>
