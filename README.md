@@ -1,3 +1,3 @@
 # saliesbox
 
-My personal homepage. Revised in 2018.
+Oh wow! My website!
