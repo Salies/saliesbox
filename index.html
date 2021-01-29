@@ -1,18 +1,118 @@
 <!DOCTYPE html>
-<meta charset=utf-8>
-<title>SaliesBox</title>
-<meta content="width=device-width,initial-scale=1" name=viewport>
-<link href=favicon.png rel="shortcut icon" type=image/png> <meta content=SaliesBox property=og:title>
-<meta content=https://saliesbox.com/ property=og:url>
-<meta content="Where testing is always available." property=og:description>
-<!--TODO: TÁ SEM IMAGEM-->
-<style>html{height:100%;}body{background: url(bg.jpg);background-size: cover;background-position: center;background-repeat: no-repeat;}.logo {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);max-height: 85px;overflow: hidden }.menu {position: absolute;left: 50%;transform: translateX(-50%);margin-right: -50%;bottom: 20px }body>div.menu>div {margin: 0 15px 0 15px }.menu div {display: block;float: left;width: 50px;height: 50px;background: url(tileset.png);transition: .3s;cursor: pointer }.menu div:hover {opacity: 1 !important }.logo, .menu div {-ms-user-select: none;-webkit-user-select: none;-moz-user-select: none;user-select: none }.contact {opacity: .5 }.hide {display: none !important }@media screen and (max-width:625px) {.logo {width: 60px;border: 10px solid transparent;outline: 10px solid #fff }}</style>
-<div class=logo><img onmousedown=return!1 src=tileset.png></div>
-<div class=menu><a href=https://github.com/salies target=_blank>
-        <div class="contact hide" style="background-position:-50px bottom"></div>
-    </a>
-    <div style="background-position:left bottom;opacity:.25"></div><a href=mailto:serezane@protonmail.com target=_blank>
-        <div class="contact hide" style="background-position:-100px bottom"></div>
-    </a>
-</div>
-<script>document.querySelector("body > div.menu > div").addEventListener("click", function () { [].map.call(document.querySelectorAll(".contact"), function (e) { e.classList.toggle("hide") }) })</script>
+<html>
+    <head>
+        <title>SaliesBox</title>
+        <link href=favicon.png rel="shortcut icon" type=image/png>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            :root{
+                --main-color:#af1d4c;
+            }
+    
+            body{
+                background-color: #000;
+                font-family: 'EB Garamond', serif;
+                color:var(--main-color);
+                font-size:16px;
+            }
+    
+            #wrapper{
+                position: fixed;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+                width:100%;
+                max-width:240px;
+            }
+    
+            .title{
+                font-family: 'Roboto Mono', monospace;
+                width: 100%;
+                display: block;
+                letter-spacing: 4px;
+            }
+    
+            svg{
+                fill:var(--main-color);
+            }
+    
+            .title > svg{
+                width: 100%;
+            }
+    
+            .avatar{
+                width:100%;
+                border-radius:14px;
+            }
+    
+            .socials{
+                font-size: 1em;
+            }
+    
+            .socials > p{
+                text-align: justify;
+            }
+    
+            .socials a{
+                color:var(--main-color);
+                text-decoration: none;
+                cursor: pointer;
+            }
+    
+            .socials a:hover{
+                text-decoration: underline;
+            }
+    
+            .socials svg{
+                margin-top: 5px;
+                margin-right:4px;
+                width: calc(1em - 4px);
+                height: calc(1em - 4px);
+                display: block;
+                float: left;
+            }
+
+            @media screen and (max-width:625px) {
+                
+            }
+        </style>
+        <!-- TODO: ADD META -->
+    </head>
+    <body>
+        <div id="wrapper">
+                <div class="title">
+                    <svg viewBox="0 0 120 18">
+                        <text x="0" y="15">saliesbox</text>
+                    </svg>
+                </div>
+                <img src="salies.jpg" class="avatar"/>
+                <div class="socials">
+                    <p>Hi! I'm Daniel Serezane, a computer science student from <a href="https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_(state)">São Paulo</a>, better known by my internet nickname <b>Salies</b>.</p>
+                    <p>There's not much to see here, but you can check out the links below to find out more about my work and myself.</p>
+                    <p>Zombies ate my pirate ship. I will make them pay.</p>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                    </svg>
+                    <span>serezane@protonmail.com</span>
+                    <br>
+                    <a href="https://github.com/Salies" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        <span>Salies</span>
+                    </a>
+                    <br>
+                    <a href="https://twitter.com/saliesbox" target="_blank" rel="noopener noreferrer">                 
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
+                        <span>@saliesbox</span>
+                    </a>
+                    <br>
+                    <a href="/">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe2" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M1.018 7.5h2.49c.037-1.07.189-2.087.437-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5zM3.05 3.049c.362.184.763.349 1.198.49.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm-.5 1.077c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.473.257 2.282.287V1.077zm0 4.014c-.91-.03-1.783-.145-2.591-.332a12.344 12.344 0 0 0-.4 2.741H7.5V5.091zm1 2.409V5.091c.91-.03 1.783-.145 2.591-.332.223.827.364 1.754.4 2.741H8.5zm-1 1H4.51c.035.987.176 1.914.399 2.741A13.596 13.596 0 0 1 7.5 10.91V8.5zm1 2.409V8.5h2.99a12.343 12.343 0 0 1-.399 2.741A13.596 13.596 0 0 0 8.5 10.91zm-1 1c-.81.03-1.577.13-2.282.287.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91zm-2.173 2.563a6.695 6.695 0 0 1-.597-.933 8.857 8.857 0 0 1-.481-1.078 8.356 8.356 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.52zM2.38 12.175c.47-.258.995-.482 1.565-.667A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.964 6.964 0 0 0 1.362 3.675zm8.293 2.297a7.01 7.01 0 0 0 2.275-1.521 8.353 8.353 0 0 0-1.197-.49 8.859 8.859 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zm.11-2.276A12.63 12.63 0 0 0 8.5 11.91v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872zm1.272-.688c.57.185 1.095.409 1.565.667A6.964 6.964 0 0 0 14.982 8.5h-2.49a13.355 13.355 0 0 1-.437 3.008zm.437-4.008h2.49a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zm-.74-3.96a8.854 8.854 0 0 0-.482-1.079 6.692 6.692 0 0 0-.597-.933c.857.355 1.63.875 2.275 1.521a8.368 8.368 0 0 1-1.197.49zm-.97.264c-.705.157-1.473.257-2.282.287V1.077c.67.204 1.335.82 1.887 1.855.143.268.276.56.395.872z"/>
+                        </svg>
+                        <span>this but in Portuguese</span>
+                    </a>
+                </div>
+        </div>
+    </body>
+</html>
