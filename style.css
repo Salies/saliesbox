@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: url(bg.jpg) no-repeat center center fixed; 
+    background-size: cover;
+}
+
+#wrapper{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+    max-width:581px;
+}
+
+#cpr{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    font-size:12px;
+    color:#fff;
+    opacity: .5;
+}
+
+.logo, .links div{
+    background-image:url(tileset.png);
+    background-repeat: no-repeat;
+}
+
+.logo{
+    height:84px;
+    width:100%;
+    background-position-y:0;
+}
+
+.links{
+    display: block;
+    margin: 15px auto 0 auto;
+    width:286px;
+    height:50px;
+}
+
+.links div{
+    width:50px;
+    height:50px;
+    display: inline-block;
+    margin-right:5px;
+    background-position-y: -92px;
+    opacity: 0;
+    transition: .2s;
+}
+
+.links div:last-of-type{
+    margin-right:0;
+}
+
+.links div a{
+    cursor: pointer;
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+.m-link{
+    cursor: pointer;
+    opacity:.5!important;
+    background-position-x: 0px;
+}
+
+.m-link:hover, .show-el{
+    opacity:1!important;
+}
+
+.link-clickable{
+    display: block!important;
+}
+
+.links div:nth-of-type(1){
+    background-position-x: -100px;
+}
+
+.links div:nth-of-type(2){
+    background-position-x: -50px;
+}
+
+.links div:nth-of-type(4){
+    background-position-x: -150px;
+}
+
+.links div:nth-of-type(5){
+    background-position-x: -200px;
+}
+
+.unselect{
+    -ms-user-select:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    user-select:none;
+}
+
+@media screen and (max-width:681px){
+    .logo{
+        margin:0 auto;
+        max-width:84px;
+        background-position-x: -581px;
+    }
+}
